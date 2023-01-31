@@ -34,44 +34,57 @@ export const users: Users = [
         ]
     },
     {
-        cnpj: '27865757000102',
-        corporateName: 'GLOBO COMUNICACAO E PARTICIPACOES S/A',
-        fantasyName: 'TV/REDE/CANAIS/G2C+GLOBO GLOBO.COM GLOBOPLAY',
-        contracts: [{
-            contractName: 'Contrato 3',
-            contractCode: '09870098-1',
-            technicalRetentionPercentage: 64
-        }]
-    },
-    {
-        cnpj: '00776574000156',
-        corporateName: 'AMERICANAS S.A.',
-        fantasyName: 'AMERICANAS.COM',
-        contracts: [{
-            contractName: 'Contrato 2',
-            contractCode: '09856781-1',
-            technicalRetentionPercentage: 15.5
-        }]
-
-    },
-    {
         cnpj: '06990590000123',
         corporateName: 'GOOGLE BRASIL INTERNET LTDA.',
         fantasyName: 'GOOGLE',
-        contracts: [{
-            contractName: 'Contrato 4',
-            contractCode: '00098676-1',
-            technicalRetentionPercentage: 90.9
-        }]
+        contracts: [
+            {
+                contractName: 'Contrato 1',
+                contractCode: '09666698-0',
+                technicalRetentionPercentage: 0.10
+            },
+            {
+                contractName: 'Contrato 2',
+                contractCode: '01246500-0',
+                technicalRetentionPercentage: 0.22
+            },
+            {
+                contractName: 'Contrato 3',
+                contractCode: '09870098-1',
+                technicalRetentionPercentage: 64.1
+            },
+            {
+                contractName: 'Contrato 4',
+                contractCode: '00099996-1',
+                technicalRetentionPercentage: 6.19
+            }
+        ]
     },
     {
         cnpj: '00000000000191',
         corporateName: 'BANCO DO BRASIL SA',
         fantasyName: 'DIRECAO GERAL',
-        contracts: [{
-            contractName: 'Contrato 5',
-            contractCode: '00000079-1',
-            technicalRetentionPercentage: 32.2
-        }]
+        contracts: [
+            {
+                contractName: 'Contrato 1',
+                contractCode: '09856781-1',
+                technicalRetentionPercentage: 7.3
+            },
+            {
+                contractName: 'Contrato 2',
+                contractCode: '09856781-1',
+                technicalRetentionPercentage: 15.5
+            },
+            {
+                contractName: 'Contrato 3',
+                contractCode: '00098676-1',
+                technicalRetentionPercentage: 90.9
+            },
+            {
+                contractName: 'Contrato 4',
+                contractCode: '00000079-1',
+                technicalRetentionPercentage: 32.2
+            }
+        ]
     }
 ]

@@ -127,6 +127,9 @@ $ npm run dev   /   yarn dev     # Para rodar o projeto Node (Backend)
 # O Backend roda na porta: 3333
 
 # Acesse http://localhost:$PORT *Ex: Cuidado para não ligar dois ou mais projetos na mesma porta, pois o servidor pode não iniciar.
+
+# Para entrar no sistema, utilize este CNPJ: 36.379.479/0001-66 (VFlows) ou pegue uma na lista de CNPJs válidos no arquivo: server/src/fake-db/users.ts
+```
 ```
 
 ## Licença ⚖️
