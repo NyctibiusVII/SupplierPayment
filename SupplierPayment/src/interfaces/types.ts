@@ -66,6 +66,13 @@ export type ReturnMessageType = 'invalid' | 'noContracts' | 'unexpectedError'
 /* Components/Logo */
 export type LogoProps = JSX.IntrinsicElements['figure']
 
+/* Components/ModeInfoModal */
+export interface ModeInfoModalType {
+    contractName: string
+    contractCode: string
+    contractTechnicalRetentionPercentage: string
+}
+
 /* Components/UI/Input */
 interface InputType {
     name: string
@@ -79,9 +86,7 @@ interface InputType {
 export type InputProps = JSX.IntrinsicElements['input'] & InputType
 
 /* Components/UI/Fieldset */
-interface FieldsetType {
-    legend: string
-}
+interface FieldsetType { legend: string }
 /**
  * Defines the types of native fieldset properties.
  */

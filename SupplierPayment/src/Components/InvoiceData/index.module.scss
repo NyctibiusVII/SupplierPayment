@@ -24,19 +24,10 @@
             "contractCode"
             "corporateName";
 
-        p, span {
-            font-size: 0.75rem;
-            white-space: nowrap;
-        }
-        span {
+        p, span { font-size: 0.75rem; }
+        > span {
             width: 8rem;
-
-            text-overflow: ellipsis;
-            white-space: nowrap;
-
-            display: inline-block;
             grid-area: corporateName;
-            overflow-x: hidden;
         }
         p {
             font-weight: bold;
@@ -88,11 +79,6 @@
                 span {
                     color: var(--gray-600);
                     font-size: 0.75rem;
-
-                    display: block;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    overflow-x: hidden;
                 }
             }
         }

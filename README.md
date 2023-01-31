@@ -43,6 +43,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <!-- Responsive, 1366 x 768, 50% (Laptop L - 1366px) -->
     <img width="400px" src="./.github/access-desktop.png">
     <img width="400px" src="./.github/contracts-desktop.png">
+    <img width="400px" src="./.github/modal-info-desktop.png">
     <img width="400px" src="./.github/invoice-desktop.png">
 </div>
 
@@ -51,6 +52,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <!-- Responsive, 320 x 711, 75% (Mobile X11T - 320px) -->
     <img width="180px" src="./.github/access-mobile.png">
     <img width="180px" src="./.github/contracts-mobile.png">
+    <img width="180px" src="./.github/modal-info-mobile.png">
     <img width="180px" src="./.github/invoice-mobile.png">
 </div>
 

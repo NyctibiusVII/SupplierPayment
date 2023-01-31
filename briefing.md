@@ -33,7 +33,7 @@ O sistema deverá apresentar as seguintes informações para o usuário:
     - ~~Código do Contrato, texto informativo, não permitido alteração;~~
     - ~~Percentual da Retenção Técnica, texto informativo, não permitido alteração;~~
     - ~~Botão “Detalhes”, tipo botão, permitindo ação de click;~~
-      - (Colocar as infos do modal)
+      - ~~(Colocar as infos do modal)~~
   - ~~Botão “Anterior”, tipo botão, permitindo click:~~
     - ~~Ao clicar, o sistema deverá retornar a página de `acesso`.~~
   - ~~Botão “Próxima”, tipo botão, permitindo click:~~

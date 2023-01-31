@@ -30,6 +30,7 @@
     --red-500: #EE4747;
 
     --shadow-10p: rgb(0 0 0 / 10%);
+    --shadow-50p: rgb(0 0 0 / 50%);
 }
 
 body {
@@ -70,6 +71,13 @@ button {
 
 li { list-style: none; }
 
+span {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
 label {
     &.invalid::after {
         content: ' - invalido';
@@ -98,6 +106,6 @@ form {
 
     &.login { max-width: 21.063rem; }
     &.invoice { padding: 0.5rem; }
-}
 
-@media screen and (min-width: 768px) { form.invoice { padding: 1rem; } }
+    @media screen and (min-width: 768px) { &.invoice { padding: 1rem; } }
+}

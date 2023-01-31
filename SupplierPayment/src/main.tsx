@@ -16,6 +16,7 @@ import Invoice         from './pages/Invoice'
 import ErrorPage       from './pages/ErrorPage'
 
 import './global.scss'
+import { MoreInfoModalProvider } from './Contexts/MoreInfoModalContext'
 
 const loaderLinkedContracts = () => {
     const activeCnpj = sessionStorage.getItem('active-cnpj')
@@ -50,9 +51,11 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
         <LoginProvider>
             <LinkedContractsProvider>
-                <InvoiceProvider>
-                    <RouterProvider router={router} />
-                </InvoiceProvider>
+                <MoreInfoModalProvider>
+                    <InvoiceProvider>
+                        <RouterProvider router={router} />
+                    </InvoiceProvider>
+                </MoreInfoModalProvider>
             </LinkedContractsProvider>
         </LoginProvider>
     </React.StrictMode>,

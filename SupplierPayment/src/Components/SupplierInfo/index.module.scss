@@ -25,12 +25,7 @@
         font-weight: bold;
         white-space: nowrap;
     }
-    span {
-        font-style: italic;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow-x: hidden;
-    }
+    span { font-style: italic; }
 }
 
 @media screen and (min-width: 768px) {

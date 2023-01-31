@@ -6,6 +6,7 @@ import { useNavigate }  from 'react-router-dom'
 import { unformatCNPJ } from '../../services/formatting'
 
 import { LinkedContractsContext } from '../../Contexts/LinkedContractsContext'
+import { MoreInfoModalContext }   from '../../Contexts/MoreInfoModalContext'
 
 import { Button } from '../UI/Button'
 
@@ -15,6 +16,7 @@ import styles     from './index.module.scss'
 export const Contracts = () => {
     const navigate = useNavigate()
     const { getUserContracts, contracts } = useContext(LinkedContractsContext)
+    const { openModal } = useContext(MoreInfoModalContext)
 
     const handlePrevious = () => {
         sessionStorage.clear()
@@ -41,8 +43,6 @@ export const Contracts = () => {
 
         activeContract != -1 ? next() : alert('Unexpected error')
     }
-
-    const handleMoreDetails = (index: number) => alert('Detalhes sobre o contrato: ' + (index + 1))
 
     useEffect(() => {
         let cnpj = sessionStorage.getItem('active-cnpj')
@@ -76,13 +76,19 @@ export const Contracts = () => {
                                     <span>
                                         <input type='checkbox' />
                                         &nbsp;
-                                        { contractName }
+                                        {contractName}
                                     </span>
                                 </td>
-                                <td><span>{ contractCode }</span></td>
-                                <td><span>{ technicalRetentionPercentage }%</span></td>
+                                <td><span>{contractCode}</span></td>
+                                <td><span>{technicalRetentionPercentage}%</span></td>
                                 <td>
-                                    <Button type='button' className='buttonIcon moreDetails' onClick={() => handleMoreDetails(index)}>
+                                    <Button type='button' className='buttonIcon moreDetails' onClick={() =>
+                                        openModal({
+                                            contractName,
+                                            contractCode,
+                                            contractTechnicalRetentionPercentage: technicalRetentionPercentage
+                                        }
+                                    )}>
                                         <img src={searchIcon} width={10} />
                                     </Button>
                                 </td>
