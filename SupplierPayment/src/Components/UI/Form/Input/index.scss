@@ -1,0 +1,59 @@
+.containerInput {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    &.invoiceNumber { grid-area: invoiceNumber; }
+    &.issueDate { grid-area: issueDate; }
+    &.dueDate { grid-area: dueDate; }
+    &.value { grid-area: value; }
+
+    &.invoiceNumber, &.issueDate,
+    &.dueDate, &.value { input { width: inherit; } }
+
+    &.taxesRetention,
+    &.technicalRetention {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.3rem;
+
+        label { font-size: 0.75rem; }
+    }
+
+    &.attachInvoice label {
+        width: 6.5rem;
+        font-weight: 600;
+    }
+}
+
+label {
+    font-size: 0.75rem;
+    margin: 0 0.5rem 0.2rem 0;
+}
+
+input {
+    background-color: var(--white);
+    color: var(--gray-1000);
+    border: 1px solid var(--gray-100);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+
+    padding: 0.3rem 1rem;
+
+    &:disabled {
+        background-color: var(--gray-100);
+        color: var(--gray-600);
+    }
+
+    &[type="file"] {
+        width: 6.5rem;
+
+        background-color: transparent;
+        color: transparent;
+        border: none;
+
+        padding: 0.3rem 6.9rem 0.3rem 0.3rem;
+        padding: 0;
+    }
+}

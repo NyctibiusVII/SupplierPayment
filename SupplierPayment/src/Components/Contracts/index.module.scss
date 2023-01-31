@@ -1,0 +1,98 @@
+.container {
+    margin-top: 1rem;
+
+    h2 {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    table {
+        width: 100%;
+
+        background-color: var(--gray-100);
+        border-radius: 0.25rem;
+        border-collapse: collapse;
+        text-align: left;
+
+        overflow: hidden;
+
+        tr:nth-child(even) { background-color: var(--gray-200); }
+
+        thead {
+            background: var(--gray-600);
+
+            th {
+                color: var(--white);
+                font-size: 0.75rem;
+                text-align: center;
+
+                padding: 0.2rem;
+             }
+        }
+        tbody {
+            td {
+                max-width: 1rem;
+
+                font-size: 0.75rem;
+                padding: 0.2rem;
+
+                &:first-child span {
+                    display: flex;
+                    align-items: flex-start;
+                }
+                &:nth-last-child(2) {
+                    background-color: var(--blue-200);
+                    color: var(--white);
+
+                    span {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                &:last-child {
+                    text-align: center;
+                    padding: 0.2rem 0;
+                }
+            }
+        }
+    }
+
+    span {
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow-x: hidden;
+    }
+
+    footer {
+        padding: 1rem 0;
+
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 352px) { .container table tbody td { padding: 0 0.7rem; } }
+@media screen and (min-width: 452px) { .container table thead th { padding: 0.6rem 0.8rem; } }
+@media screen and (min-width: 768px) {
+    .container {
+        table {
+            thead th {
+                font-size: 0.875rem;
+                padding: 0.5rem 1.5rem
+            }
+            tbody td {
+                max-width: 5.2rem;
+
+                font-size: 0.75rem;
+                padding: 0.2rem 1.5rem;
+
+                &:last-child { padding: 0.2rem 1.5rem; }
+            }
+        }
+        footer { justify-content: right; }
+    }
+}

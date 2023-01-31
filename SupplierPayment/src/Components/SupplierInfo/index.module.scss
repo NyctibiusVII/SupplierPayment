@@ -1,0 +1,53 @@
+.content {
+    width: 100%;
+    height: 100%;
+
+    font-size: 0.875rem;
+
+    display: grid;
+    grid-template-areas:
+      "corporateName"
+      "fantasyName"
+      "cnpj";
+
+    .corporateName { grid-area: corporateName; }
+    .fantasyName { grid-area: fantasyName; }
+    .cnpj { grid-area: cnpj; }
+
+    .corporateName,
+    .fantasyName,
+    .cnpj {
+        max-width: 15rem;
+        display: flex;
+    }
+
+    p {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+    span {
+        font-style: italic;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .content {
+        font-size: 1rem;
+
+        grid-auto-flow: column;
+        grid-template-columns: 2.5fr 1.5fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0.1rem 2rem;
+        grid-template-areas:
+        "corporateName cnpj"
+        "fantasyName .";
+
+        .corporateName,
+        .fantasyName,
+        .cnpj { max-width: 20rem; }
+        .cnpj { justify-content: flex-end; }
+    }
+}

@@ -1,0 +1,17 @@
+footer.container {
+    padding: 1.5rem 0 0;
+
+    display: flex;
+
+    small {
+        width: 100%;
+
+        color: var(--gray-200);
+        font-size: 0.75rem;
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,68 @@
+button {
+    width: 100%;
+
+    color: var(--white);
+    border-radius: 0.25rem;
+
+    margin: 1rem 0 0.5rem;
+    padding: 0.5rem 0;
+
+    display: flex;
+    justify-content: center;
+
+    transition: background-color 200ms;
+
+    &.access {
+        background-color: var(--green-500);
+
+        &:hover { background-color: var(--green-600); }
+        &:active,
+        &:focus-visible { background-color: var(--green-700); }
+    }
+    &.previous {
+        background-color: var(--yellow-300);
+
+        &:hover { background-color: var(--yellow-400); }
+        &:active,
+        &:focus-visible { background-color: var(--yellow-500); }
+    }
+    &.next {
+        background-color: var(--green-500);
+
+        &:hover { background-color: var(--green-600); }
+        &:active,
+        &:focus-visible { background-color: var(--green-700); }
+    }
+
+    &.buttonIcon {
+        width: auto;
+        font-size: 0;
+        margin: 0;
+        padding: 0.5rem;
+    }
+    &.moreDetails {
+        background-color: var(--blue-200);
+
+        margin: auto;
+
+        &:hover { background-color: var(--blue-300); }
+        &:active,
+        &:focus-visible { background-color: var(--blue-400); }
+    }
+    &.removeFile {
+        background-color: var(--red-300);
+
+        &:hover { background-color: var(--red-400); }
+        &:active,
+        &:focus-visible { background-color: var(--red-500); }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    button.previous,
+    button.next {
+        width: 10.91rem;
+        font-size: 0.875rem;
+    }
+    button.moreDetails { margin: 0 0 0 auto; }
+}

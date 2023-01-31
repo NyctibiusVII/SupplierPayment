@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFF;
+    --black: #000;
+
+    --gray-100: #EFF0E2;
+    --gray-200: #DADBCE;
+    --gray-600: #8F8F8F;
+    --gray-1000: #242424;
+
+    --green-500: #03A64D;
+    --green-600: #009744;
+    --green-700: #01853C;
+
+    --yellow-300: #E9EC38;
+    --yellow-400: #D5D81E;
+    --yellow-500: #CDCE09;
+
+    --blue-200: #766CFD;
+    --blue-300: #6056EB;
+    --blue-400: #4C43D4;
+
+    --red-300: #FD6C6C;
+    --red-400: #F55A5A;
+    --red-500: #EE4747;
+
+    --shadow-10p: rgb(0 0 0 / 10%);
+}
+
+body {
+    color: var(--gray-1000);
+    background-color: var(--gray-100);
+    font-family: Urbanist, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+
+    color-scheme: light dark;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    #root {
+        min-width: 320px;
+        min-height: 100vh;
+
+        padding: 1rem;
+
+        display: flex;
+    }
+}
+
+h1 {
+    color: var(--gray-1000);
+    font-weight: 600;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+li { list-style: none; }
+
+label {
+    &.invalid::after {
+        content: ' - invalido';
+        color: var(--red-300);
+    }
+    &.noContracts::after {
+        content: ' - sem contratos ativos';
+        color: var(--yellow-300);
+    }
+    &.unexpectedError::after {
+        content: ' - erro inesperado!';
+        color: var(--red-300);
+    }
+}
+
+form {
+    width: 100%;
+
+    border: 0.063rem solid var(--gray-100);
+    border-radius: 0.25rem;
+
+    padding: 1rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    &.login { max-width: 21.063rem; }
+    &.invoice { padding: 0.5rem; }
+}
+
+@media screen and (min-width: 768px) { form.invoice { padding: 1rem; } }
