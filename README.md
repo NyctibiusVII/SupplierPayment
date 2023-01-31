@@ -130,7 +130,6 @@ $ npm run dev   /   yarn dev     # Para rodar o projeto Node (Backend)
 
 # Para entrar no sistema, utilize este CNPJ: 36.379.479/0001-66 (VFlows) ou pegue uma na lista de CNPJs válidos no arquivo: server/src/fake-db/users.ts
 ```
-```
 
 ## Licença ⚖️
 Este projeto está sob a licença do MIT. Veja o arquivo [LICENSE](https://github.com/NyctibiusVII/SupplierPayment/blob/main/LICENSE) para mais detalhes.
